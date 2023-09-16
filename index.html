@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio| DEPRIAN P S</title>
+    <title>Portfolio | DEPRIAN P S</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,10 +12,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style> 
+             img:hover {
+            opacity: 0.8; 
+             } </style>
   </head>
   <body>
     <header id="header">
-      <h1>DEPRIAN </h1>
+      <h1>DEPRIAN</h1>
       <nav>
         <a href="#about">About</a>
         <a href="#service">Service</a>
@@ -24,21 +28,16 @@
     </header>
     <section id="landing">
       <div>
-        <h1> </h1>
+        <h1>Welcome to My Portfolio</h1>
         <p>
-          jangan lupa follow instagram @depppppri
+          Don't forget to follow me on Instagram @depppppri
         </p>
         <div>
           <a class="btn btn-alt" href="#about">More Info</a>
           <a class="btn" href="#contact">Contact Us</a>
         </div>
       </div>
-      
-
-
-      
       <div>
-        
         <img src="Images/dream.jpeg" alt="Landing Image" />
       </div>
     </section>
@@ -74,21 +73,21 @@
     <section id="service">
       <div class="service-header">
         <div>
-          <h1>Our Servicee</h1>
+          <h1>Our Services</h1>
           <p>We have the best service to solve your problem</p>
         </div>
         <a href="#contact" class="btn">Contact Us</a>
       </div>
       <div class="service-detail">
         <div class="service-detail-item">
-          <img src="Images/lpto.jpeg" alt="service 1 image" />
-          <h2>Web application</h2>
+          <img src="Images/lpto.jpeg" alt="Service 1 Image" />
+          <h2>Web Application</h2>
           <p>
-            web application is a computer program that uses a web browser to perform a particular function. It is also called a web app. Web apps are present on many websites. A simple example is a contact form on a website.
+            Web application is a computer program that uses a web browser to perform a particular function. It is also called a web app. Web apps are present on many websites. A simple example is a contact form on a website.
           </p>
         </div>
         <div class="service-detail-item">
-          <img src="Images/iu ux.jpeg" alt="service 2 image" />
+          <img src="Images/iu ux.jpeg" alt="Service 2 Image" />
           <h2>UI/UX Design</h2>
           <p>
             UI (user interface) design is all about what users actually see on the application’s screen – text, colors, backgrounds, icons, and moving elements like animations. That’s why UI design overlaps with graphic design. The career path in UI design is quite similar to graphic design – graphic design education and experience in product development projects are a big plus for UI designers.
@@ -101,10 +100,10 @@
           </p>
         </div>
         <div class="service-detail-item">
-          <img src="Images/uutt.jpeg" alt="service 4 image" />
+          <img src="Images/uutt.jpeg" alt="Service 3 Image" />
           <h2>Mobile Application</h2>
           <p>
-            mobile application, most commonly referred to as an app, is a type of application software designed to run on a mobile device, such as a smartphone or tablet computer. Mobile applications frequently serve to provide users with similar services to those accessed on PCs. Apps are generally small, individual software units with limited function. This use of app software was originally popularized by Apple Inc. and its App Store, which offers thousands of applications for the iPhone, iPad and iPod Touch.
+            Mobile application, most commonly referred to as an app, is a type of application software designed to run on a mobile device, such as a smartphone or tablet computer. Mobile applications frequently serve to provide users with similar services to those accessed on PCs. Apps are generally small, individual software units with limited function. This use of app software was originally popularized by Apple Inc. and its App Store, which offers thousands of applications for the iPhone, iPad, and iPod Touch.
           </p>
         </div>
       </div>
@@ -112,31 +111,31 @@
     <section id="contact">
       <h1>Contact Us</h1>
       <p>
-        if you want join
+        If you want to Join
       </p>
       <div class="contact-detail">
         <form action="">
           <h1>Tell us your problem</h1>
           <div class="form-group">
             <div id="input-name" class="input-group">
-              <label for="">Name</label>
-              <input type="text" placeholder="Your Name" />
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your Name" />
             </div>
             <div id="input-subject" class="input-group">
-              <label for="">Subject</label>
-              <input type="text" />
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" />
             </div>
             <div id="input-email" class="input-group">
-              <label for="">Email</label>
-              <input type="email" />
+              <label for="email">Email</label>
+              <input type="email" id="email" />
             </div>
             <div id="input-phone" class="input-group">
-              <label for="">Phone Number</label>
-              <input type="tel" />
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" />
             </div>
             <div id="input-message" class="input-group">
-              <label for="">Message</label>
-              <input type="text" />
+              <label for="message">Message</label>
+              <input type="text" id="message" />
             </div>
           </div>
           <button class="btn">Submit</button>
@@ -163,9 +162,29 @@
         </p>
       </div>
       <div class="social-icon">
-        <img src="Images/1669001902644.png" alt="" />
-        
+        <a href="https://www.instagram.com/durvee_/"> <img src="Images/instagram (1).png" alt="Social Icon" width="70"/> @depppppri </a>
       </div>
+      <div class="social-icon">
+        <a href="https://www.facebook.com/durv.durv.98?mibextid=ZbWKwL"><img src="Images/facebook.png" alt="Social Icon" width="75"/> </a>
+      </div>
+      
     </footer>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+  
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+  
+              if (targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop,
+                      behavior: 'smooth',
+                  });
+              }
+          });
+      });
+    </script>
   </body>
 </html>

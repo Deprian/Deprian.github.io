@@ -1,28 +1,34 @@
-*{
-    font-family:cursive
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
 }
+
+/* Global styles */
 a {
- text-decoration:none;
- color: black;
- font-size:24px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
 }
 
-p{
+p {
     color: #979799;
-    font: size 24px;
-    margin:0 0 16px 0;
+    font-size: 24px;
+    margin: 0 0 16px 0;
 }
 
-section{
+section {
     padding: 64px 128px;
 }
 
-img{
-    width: 100%;
-}  
+img {
+    max-width: 100%;
+}
 
-/* header section style */
-header{
+/* Header section style */
+header {
     padding: 16px 128px;
     display: flex;
     align-items: center;
@@ -30,50 +36,50 @@ header{
     border-bottom: 1px solid #f5c338;
 }
 
-nav>a{
+nav > a {
     margin-left: 16px;
 }
 
-nav>a:hover{
-    color:#f5c338
+nav > a:hover {
+    color: #f5c338;
 }
 
-/landing section style/
-#landing{
-    display:flex;
+/* Landing section style */
+#landing {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 16px;
 }
 
-.btn{
+.btn {
     background-color: #ffc108;
-    color:white;
+    color: white;
     padding: 8px 24px;
 }
 
 .btn-alt {
     background-color: white;
-    color:black;
+    color: black;
     border: 2px solid #ffc108;
     margin-right: 16px;
 }
 
-/* about section style */
+/* About section style */
 #about {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 16px;
 }
 
-#abaout>div{
+#about > div {
     width: 50%;
 }
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat (3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
     margin-top: 72px;
 }
@@ -84,14 +90,14 @@ nav>a:hover{
     align-items: center;
 }
 
-.about-stats-item>div {
+.about-stats-item > div {
     width: 50px;
     height: 10px;
     background-color: #ffee02;
     margin-bottom: 16px;
 }
 
-/* service section style*/
+/* Service section style */
 .service-header {
     display: flex;
     align-items: center;
@@ -99,7 +105,7 @@ nav>a:hover{
 }
 
 .service-header h1 {
-    position:relative;
+    position: relative;
 }
 
 .service-header h1::before {
@@ -121,17 +127,24 @@ nav>a:hover{
 }
 
 .service-detail-item {
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0,1);
+    box-shadow: 2px 4px 4px rgba(169, 8, 8, 0.1);
 }
 
 .service-detail-item:hover {
     transform: scale(1.15);
 }
 
+
+
+
+
 .service-detail-item img {
-    width: 100%;
-    filter: grayscale(1);
+    max-width: 100%;
+    
+    
+    
 }
+
 
 .service-detail-item h2 {
     padding: 0 16px;
@@ -142,17 +155,17 @@ nav>a:hover{
     padding: 0 16px;
 }
 
-/* contact section style */
+/* Contact section style */
 #contact h1 {
     position: relative;
 }
 
-#contact>h1::before {
+#contact > h1::before {
     content: "";
     width: 60px;
     height: 60px;
     position: absolute;
-    background: ur1("./images/accent2.svg");
+    background: url("./images/accent2.svg");
     left: -20px;
     top: -10px;
     z-index: -1;
@@ -165,8 +178,8 @@ nav>a:hover{
     column-gap: 128px;
 }
 
-.contact-detail>div,
-.contact-detail>div {
+.contact-detail > div,
+.contact-detail > div {
     width: 50%;
 }
 
@@ -192,12 +205,12 @@ form button:hover {
 
 .form-group {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     margin-top: 32px;
     grid-template-areas: "name subject"
-    "email phone"
-    "message message";
+                        "email phone"
+                        "message message";
 }
 
 #input-name {
@@ -205,19 +218,19 @@ form button:hover {
 }
 
 .input-subject {
-    grid-area:subject;
+    grid-area: subject;
 }
 
 .input-email {
-    grid-area:email;
+    grid-area: email;
 }
 
 .input-phone {
-    grid-area:phone;
+    grid-area: phone;
 }
 
 .input-message {
-    grid-area:message;
+    grid-area: message;
 }
 
 .input-group {
@@ -239,11 +252,11 @@ form button:hover {
     font-size: 20px;
 }
 
-.input-group input:pocus {
+.input-group input:focus {
     border-bottom: 2px solid #ffc108;
 }
 
-/* footer sectiion style */
+/* Footer section style */
 footer {
     padding: 16px 128px;
     background-color: #ff8308;
